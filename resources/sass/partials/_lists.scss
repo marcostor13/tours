@@ -1,0 +1,30 @@
+.tableList{
+    
+    tr, td{
+        border: 2px solid $color1 !important;
+    }
+
+    thead{
+        background-color: $color1;
+        color: white;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color:rgba($color: $color1, $alpha: .1);
+    }
+
+    input[type='search']{
+        border-radius: 0;
+        min-height: 45px;
+        border: 2px solid $color1;
+    }
+
+    .dataTables_length{
+        select{
+            margin-left: 20px;
+            border-radius: 0;
+            border: 2px solid $color1;
+        }
+    }
+
+}

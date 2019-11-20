@@ -1,0 +1,22 @@
+#menuLeft{
+    ul{
+        li{
+            color: white !important; 
+            transition: all .2s ease-in;
+            font-size: 10pt;
+            i{
+                font-size: 15pt;
+            }          
+        }
+
+        li:hover{
+            background-color: $color2;
+            transition: all .2s ease-out;
+        }        
+    }
+
+    .activeLi{
+        background-color: #13132f ;
+    }
+        
+}

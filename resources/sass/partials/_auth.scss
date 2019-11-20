@@ -1,0 +1,23 @@
+body{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+
+.loginRegister{
+    *{
+        color: white !important;
+    }
+
+    input{
+        color: $color1 !important;
+        border-radius: 0;
+        border: 2px solid $color3;
+    }
+    .card-header{
+        
+        background-color: $color2 !important;
+    }
+}

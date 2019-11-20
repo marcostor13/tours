@@ -1,0 +1,89 @@
+*{
+    font-family: 'Roboto';
+}
+
+.text-color1{
+    color: $color1;
+}
+.text-color2{
+    color: $color2;
+}
+.text-color3{
+    color: $color3;
+}
+.text-color4{
+    color: $color4;
+}
+
+.bg-color1{
+    background-color: $color1;
+}
+.bg-color2{
+    background-color: $color2;
+}
+.bg-color3{
+    background-color: $color3;
+}
+.bg-color4{
+    background-color: $color4;
+}
+
+
+.alto{
+    min-height: 100vh-5.9;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.hide{
+    
+    display: none;
+
+}
+
+.btn1{
+    transition: all .2s ease-in;
+    max-height: 45px;
+    min-height: 45px;
+    border: 2px solid $color4;
+    background-color: rgba($color: $color4, $alpha: 1);  
+    color: white;
+}
+
+.btn1:hover{
+    border: 2px solid $color4;
+    background-color: rgba($color: #FFFFFF, $alpha: 0);  
+
+    transition: all .1s ease-out;
+    color: $color4 !important;
+}
+
+
+.btn2{
+    transition: all .2s ease-in;
+    max-height: 45px;
+    min-height: 45px;
+    border: 2px solid $color2;
+    background-color: rgba($color: $color2, $alpha: 1);  
+    color: white;
+}
+
+.btn2:hover{
+    border: 2px solid $color2;
+    background-color: rgba($color: #FFFFFF, $alpha: 0);  
+
+    transition: all .1s ease-out;
+    color: $color2 !important;
+}
+
+
+@keyframes opacityShow {
+  0% { 
+      opacity: 0
+  }
+  
+  100%{
+    opacity: 1;
+  }
+}

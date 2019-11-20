@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./partials/forms');
 
 window.Vue = require('vue');
 
@@ -19,7 +20,10 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('forms-commponent', require('./components/FormsCommponent.vue').default);
+Vue.component('content-commponent', require('./components/ContentCommponent.vue').default);
+Vue.component('menu-commponent', require('./components/MenuCommponent.vue').default);
+Vue.component('list-commponent', require('./components/ListCommponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
