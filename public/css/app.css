@@ -11148,6 +11148,10 @@ a.text-dark:focus {
   display: none;
 }
 
+.hide-force {
+  display: none !important;
+}
+
 .btn1 {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -11184,6 +11188,88 @@ a.text-dark:focus {
   color: #3fc1c9 !important;
 }
 
+.btn-edit {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  max-height: 30px;
+  min-height: 30px;
+  border: 2px solid #364f6b;
+  background-color: #364f6b;
+  color: white;
+}
+
+.btn-edit:hover {
+  border: 2px solid #364f6b;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  color: #364f6b !important;
+}
+
+.btn-delete {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  max-height: 30px;
+  min-height: 30px;
+  border: 2px solid #d84141;
+  background-color: #d84141;
+  color: white;
+}
+
+.btn-delete:hover {
+  border: 2px solid #d84141;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  color: #d84141 !important;
+}
+
+.btn-cancel {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  max-height: 30px;
+  min-height: 30px;
+  border: 2px solid #b6b6b6;
+  background-color: #b6b6b6;
+  color: white;
+}
+
+.btn-cancel:hover {
+  border: 2px solid #b6b6b6;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  color: #b6b6b6 !important;
+}
+
+.modal-container {
+  position: fixed;
+  overflow: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+          align-items: start;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #364f6b;
+}
+
+.modal-container #modal {
+  min-height: 600px;
+}
+
+.modal-container #modal i {
+  font-size: 20pt;
+  color: #364f6b;
+}
+
 @-webkit-keyframes opacityShow {
   0% {
     opacity: 0;
@@ -11204,18 +11290,23 @@ a.text-dark:focus {
   }
 }
 
-.forms label {
+.forms label,
+.modal-container label {
   color: #364f6b;
 }
 
-.forms input {
+.forms input,
+.forms select,
+.modal-container input,
+.modal-container select {
   border-radius: 0;
   border: 2px solid #364f6b;
   min-height: 45px;
   max-height: 45px;
 }
 
-.forms .submit {
+.forms .submit,
+.modal-container .submit {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   max-height: 45px;
@@ -11223,7 +11314,8 @@ a.text-dark:focus {
   border: 2px solid #364f6b;
 }
 
-.forms .submit:hover {
+.forms .submit:hover,
+.modal-container .submit:hover {
   border: 2px solid #364f6b;
   background-color: rgba(255, 255, 255, 0);
   -webkit-transition: all 0.1s ease-out;
@@ -11231,19 +11323,25 @@ a.text-dark:focus {
   color: #364f6b !important;
 }
 
-.forms .cancel {
+.forms .cancel,
+.modal-container .cancel {
   border: 2px solid #364f6b;
   background-color: rgba(255, 255, 255, 0);
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
-.forms .cancel:hover {
+.forms .cancel:hover,
+.modal-container .cancel:hover {
   border: 2px solid #fc5185;
   background-color: #fc5185;
   color: white !important;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+}
+
+#content-view p {
+  border: 2px solid #364f6b;
 }
 
 #menuLeft ul li {
@@ -11302,7 +11400,8 @@ body {
   color: white !important;
 }
 
-.loginRegister input {
+.loginRegister input,
+.loginRegister select {
   color: #364f6b !important;
   border-radius: 0;
   border: 2px solid #f5f5f5;

@@ -42,6 +42,10 @@
 
 }
 
+.hide-force{
+    display: none !important;
+}
+
 .btn1{
     transition: all .2s ease-in;
     max-height: 45px;
@@ -75,6 +79,84 @@
 
     transition: all .1s ease-out;
     color: $color2 !important;
+}
+
+.btn-edit{
+    transition: all .2s ease-in;
+    max-height: 30px;
+    min-height: 30px;
+    border: 2px solid $color1;
+    background-color: rgba($color: $color1, $alpha: 1);  
+    color: white;
+}
+
+.btn-edit:hover{
+    border: 2px solid $color1;
+    background-color: rgba($color: #FFFFFF, $alpha: 0);  
+
+    transition: all .1s ease-out;
+    color: $color1 !important;
+}
+
+.btn-delete{
+    transition: all .2s ease-in;
+    max-height: 30px;
+    min-height: 30px;
+    border: 2px solid rgb(216, 65, 65);
+    background-color: rgba($color: rgb(216, 65, 65), $alpha: 1);  
+    color: white;
+}
+
+.btn-delete:hover{
+    border: 2px solid rgb(216, 65, 65);
+    background-color: rgba($color: #FFFFFF, $alpha: 0);  
+
+    transition: all .1s ease-out;
+    color: rgb(216, 65, 65) !important;
+}
+
+.btn-cancel{
+    transition: all .2s ease-in;
+    max-height: 30px;
+    min-height: 30px;
+    border: 2px solid $color5;
+    background-color: rgba($color: $color5, $alpha: 1);  
+    color: white;
+}
+
+.btn-cancel:hover{
+    border: 2px solid $color5;
+    background-color: rgba($color: #FFFFFF, $alpha: 0);  
+
+    transition: all .1s ease-out;
+    color: $color5 !important;
+}
+
+
+// MODAL
+
+.modal-container{
+    position: fixed; 
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 100px;
+    top: 0; 
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000; 
+    background-color: rgba($color: #000000, $alpha: .6);
+    color: $color1;
+    #modal{
+        min-height: 600px;
+        i{
+            font-size: 20pt;
+            color: $color1;
+        }
+    }
+
 }
 
 

@@ -11,7 +11,7 @@ body{
         color: white !important;
     }
 
-    input{
+    input, select{
         color: $color1 !important;
         border-radius: 0;
         border: 2px solid $color3;

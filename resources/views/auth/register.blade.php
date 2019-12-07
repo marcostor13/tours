@@ -12,6 +12,40 @@
                         @csrf
 
                         <div class="form-group row">
+                            <label for="companyid" class="col-md-4 col-form-label text-md-right">{{ __('Empresa') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" name="companyid"  autofocus>
+                                    <option value="1">Company1</option>
+                                    <option value="2">Company2</option>
+                                </select>                              
+
+                                @error('companyid')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de usuario') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" name="type"  autofocus>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Usuario</option>
+                                </select>                               
+
+                                @error('type')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
                             <div class="col-md-6">

@@ -29,8 +29,13 @@
                 <li class="nav-item cursor p-3 m-0"><i class="fas fa-utensils ml-2"></i><span class="ml-4">Restaurantes</span></li>
             </div>
             <li v-on:click="downMenu('mantenimiento')" v-bind:class="{ activeLi: (isActive === 'mantenimiento') }" class="down nav-item cursor p-3 m-0 d-flex"><i class="fas fa-dice-d6"></i><span class="ml-4">Mantenimiento</span><div class="flex-1"><i class="fas fa-caret-down float-right"></i></div></li>
-            <div v-bind:class="{ hide: (isActive !== 'mantenimiento') }">
-                <li class="nav-item cursor p-3 m-0"><i class="fas fa-table ml-2"></i><span class="ml-4">Tablas</span></li>
+            <div v-bind:class="{ hide: (isActive !== 'mantenimiento' && isActive !== 'tablas') }">
+                <li v-on:click="downMenu('tablas')" v-bind:class="{ activeLi: (isActive === 'tablas') }" class="down nav-item cursor p-3 m-0 d-flex"><i class="fas fa-table ml-2"></i><span class="ml-4">Tablas</span><div class="flex-1"><i class="fas fa-caret-down float-right"></i></div></li>
+                <div v-bind:class="{ hide: (isActive !== 'tablas') }">
+                    <li class="nav-item cursor p-3 m-0"><i class="fas fa-table ml-4"></i><span class="ml-4">Tipo de contactos</span></li>
+                    <li class="nav-item cursor p-3 m-0"><i class="fas fa-table ml-4"></i><span class="ml-4">Bancos</span></li>
+                    <li class="nav-item cursor p-3 m-0"><i class="fas fa-table ml-4"></i><span class="ml-4">Monedas</span></li>
+                </div>  
                 <li class="nav-item cursor p-3 m-0"><i class="fas fa-hotel ml-2"></i><span class="ml-4">Hoteles</span></li>
                 <li class="nav-item cursor p-3 m-0"><i class="fas fa-map-marker-alt ml-2"></i><span class="ml-4">Localidades</span></li>
                 <li class="nav-item cursor p-3 m-0"><i class="fas fa-box-open ml-2"></i><span class="ml-4">Armado de paquetes</span></li>
@@ -57,11 +62,21 @@
 
         mounted() {
              $('#menuLeft div li ').click(function () {
-                let route = $(this).text().toLowerCase().replace(/ /g, "-").normalize('NFD')
-                     .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
-                     .normalize();
-                window.location.href="/home/"+route;
-            
+                 if(!$(this).hasClass('down')){                 
+                    let route = $(this).text().toLowerCase().replace(/ /g, "-").normalize('NFD')
+                        .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
+                        .normalize();
+                    window.location.href="/home/"+route;
+                }            
+            });
+
+            $('#menuLeft div li div li ').click(function () {
+                 if(!$(this).hasClass('down')){                 
+                    let route = $(this).text().toLowerCase().replace(/ /g, "-").normalize('NFD')
+                        .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
+                        .normalize();
+                    window.location.href="/home/"+route;
+                }            
             });
         },
 
